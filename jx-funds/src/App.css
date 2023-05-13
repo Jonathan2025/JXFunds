@@ -1,38 +1,579 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* nav bar styling */
+.searchbar{
+  max-width: 20%; 
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* justify-content:space-around; */
+  background-color:rgba(245,245,245,.6);
+  padding: 1%;
+  text-decoration: none;
+  font-size: 1.5vw; 
+  }
+
+.navBar{
+  font-family: "gotham narrow",Georgia,serif;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25%;
+  background-color: #79a6d2;
+  opacity: .9;
+  text-decoration: none;
+  font-size: 1.75vw; 
+  margin-bottom: 1%;
+  }
+
+.sticky-top{
+  position: sticky;
+}
+
+a:not(.logo){
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(29, 29, 29);
+}
+a:hover :not(.logo){
+  cursor: pointer;
+  color: #bbb;
+}
+
+/* Logo styling on the NAV bar */
+.logo{
+  max-width: 20%;
+  font-family: "gotham narrow",Georgia,serif;
+  font-weight:bold;
+  font-size: 4vw;
+  position: relative;
+  /* left: 2%;  */
+  color:rgb(43, 43, 43);
+  text-decoration: none;
+}
+
+.logo:hover{
+ text-decoration: none;
+}
+
+/* search bar styling on the nav bar */
+.submitBtn{
+  max-width: 50%;
+  position: relative;
+  background-color: rgb(98, 114, 122);
+  border-style: none;
+  margin: 0 auto;
+}
+
+input[type = search]{
+  flex-grow: 1;
+  position: relative;
+  max-width: 75%; 
+}
+
+/* drop down styling  on the nav bar*/
+.dropDown, .dropBtn{
+  border: none;
+  background-color: inherit;
+  font-size: 2vw;
+  font-family: "gotham narrow",Georgia,serif;
+  font-weight: bold;
+  position: relative
+}
+.dropLinks{
+  display: none;
+  position: absolute;
+  background-color: whitesmoke;
+  color: black;
+  margin-left: -24px;
+  padding: 10px;
+  min-width: 110px;
+  min-height: 80px;
+  text-align:center;
+  box-shadow: 0px 5px 10px 5px rgba(0,0,0,.5);
+}
+.dropBtn:hover ~ .dropLinks, .dropLinks:hover{
+  display: block;
+}
+.dropBtn:hover, .dropLink:hover{
+  background-color: whitesmoke;
+  color: black;
+}
+.dropBtn:hover{
+background: inherit;
+}
+.dropLink:hover{
+  color: #bbb;
+}
+.unicodeArrow{
+  font-size: 10px;
+  color: black;
+}
+
+/* within the dropdown adjust the size of the email to fit in the dropdown */
+.user-email {
+  font-size: clamp(10px, 1.25vw, 1.25vw);
+  background-color: #6699cc;
+  padding: 5px;
+}
+
+
+/* landing/ home page styling */
+.landing{
+  font-family: "gotham narrow",Georgia,serif;
+  margin: 0;
+  text-align: center;
+  font-size: 45px;
+  -webkit-animation: fadeIn 4s;
+  animation:fadeIn 4s;
+}
+@keyframes fadeIn{
+  0% {opacity: 0}
+  100% {opacity: 1;}
+}
+.landing_img{
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+}
+.landing_phrase {
+  color: whitesmoke;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.phraseL{
+  font-size: 50px;
+  font-weight: bold;
+}
+.aboutLink{
+  font-size: 25px;
+  color: whitesmoke;
+}
+
+/* index page styling */
+.containerIndex{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.companyLogo {
+  width: 250px;
+  height: 125px;
+  border: 1px solid white;
+  background-color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* create page styling (Please note this will also serve as the LoginPage as well*/
+.createFund{
+  font-family: "gotham narrow",Georgia,serif;
+  margin: 0px 90px 0px 90px;
+  display: grid;
+  margin-top: 30px;
+  background-color: rgb(98, 114, 122);
+  max-height: 700px;
 }
+.createImg{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 90%;
+}
+.createForm{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  text-align: center;
+  font-size: 1vw;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+input[type=text]{
+  font-family: 'PT Serif', serif;
+  font-size: 1vw;
+  padding: 5px;
+  margin: 0px 20px 10px 10px;
+  border: none;
+}
+input[type=submit]:not(.submitBtn){
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
+  padding: 7px;
+  border-radius: 5px;
+  width: 300px;
+margin-bottom: 5px
+}
+input[type=submit]:hover{
+  cursor: pointer;
+  background-color: gainsboro;
+}
+input[type=date]{
+  font-size: 1vw;
+  padding: 2px;
+  margin-bottom: 10px;
+}
+.formT{
+  font-weight: bold;
+  font-size: 30px;
+  color: whitesmoke;
+}
+
+/* about page styling */
+.allAbout{
+  font-family: "gotham narrow",Georgia,serif;
+  animation: fadeIn 2s;
+  text-align: center;
+  margin: auto;
+}
+
+@keyframes fadeIn{
+0% {opacity: .4;}
+100% {opacity: 1;}
+}
+.aboutImg{
+  width: 60%;
+  height: 50vh;
+  margin: auto;
+}
+.aboutPhrase{
+  background-color: #f1efeb;
+  padding: 15px;
+  margin-top: 10px;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.aboutLine{
+  margin-left: 30%;
+  margin-right: 30%;
+}
+.aboutT{
+  font-weight: bold;
+}
+.faqPg{
+  color: black;
+  font-family: "gotham narrow",Georgia,serif;
+  font-size: 1vw;
+  text-align: center;
+}
+.title-name{
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.about{
+  font-family: "gotham narrow",Georgia,serif;
+  margin-top: 5px;
+  color: rgb(45, 40, 40);
+  text-align: center;
+  font-size: 12px;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.aboutParagraph{
+  font-size: 1.25em;
+}
+
+.aboutUs{
+  color:rgb(17, 14, 14);
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 17px;
+  margin-top: 5px;
+}
+.dev{
+  font-family: "gotham narrow",Georgia,serif;
+  margin-top: 20px;
+  width:300px;
+  font-size: 11px;
+}
+.jonathan,.joey,.john,.joseline{
+  width:250px;
+  height: 300px;
+  border-radius: 5%;
+  filter: grayscale(100%);
+}
+.joseline{
+ object-fit: cover;
+}
+
+/* edit pg styling */
+.editFund{
+  font-family: "gotham narrow",Georgia,serif;
+  background-color: rgb(98, 114, 122);
+  margin: 0px 90px 0px 90px;
+  display: grid;
+  margin-top: 30px;
+}
+.editImg{
+  grid-column-start:1 ;
+  grid-column-end: 3;
+  width: 100%;
+  max-height: 100%;
+}
+.editForm{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  font-size: 1vw;
+  text-align: center;
+  margin-left: 140px;
+  margin-right: 100px;
+  margin-top: 15px;
+  max-width: 20vw;
+}
+label{
+  font-size: 1vw;
+  font-weight: bold;
+}
+select[name="company"]{
+width: 180px;
+height: 35px;
+font-size: 15px;
+border: none;
+}
+
+/* footer styling */
+.footer{
+  font-family: "gotham narrow",Georgia,serif;
+  margin-top: 20px;
+  text-align:center;
+  color: #bbb;
+}
+.footerTag{
+  margin-top: 0px;
+  font-size: 15px;
+}
+.socials{
+  display: flex;
+  flex-wrap: wrap;
+ justify-content: center;
+}
+.twitter, .publications, .contacts,.faq, .chatIcon{
+  max-width: 45px;
+  margin-left: 5px;
+  border:solid white;
+  border-radius: 30%;
+  transition: transform 0.3s ease;
+}
+.twitter{
+  border-radius: 45%;
+}
+.twitter:hover, .publications:hover, .contacts:hover,.faq:hover, .chatIcon:hover{
+  transform: scale(1.2);
+}
+
+/* account page styling */
+.account{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: whitesmoke;
+  border-radius:10px;
+  height: 300px;
+  margin: 0px 90px 0px 90px;
+  color:black
+}
+
+/* FAQ styling */
+.faqLine{
+  margin-left:400px;
+  margin-right: 400px;
+}
+.faqPg{
+  background-color:  rgb(233, 232, 232);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px 0px 30px;
+  padding: 10px;
+}
+.faq_phrase, hr{
+  text-align: center;
+  color: black;
+  font-weight: bold;
+ 
+}
+.question{
+  border-style: outset;
+  padding: 10px;
+  margin: 10px 0px 10px 0px;
+}
+
+.quest{
+  font-weight: bold;
+}
+
+/* editing of the funds containers in the index page */
+.fund{
+  font-family: "gotham narrow",Georgia,serif;
+  border: 1px solid white;
+  text-align: center;
+  background-color: #bbb;
+}
+
+.fund a {
+  display: block;
+  text-align: center;
+  background-color: #4b5053;
+  color: #FFFFFF;
+  padding: 2px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.fund a:hover {
+  background-color: #227721;
+  color: #FFFFFF;
+}
+
+/* added styling for the comet chat */
+.cometchat-container {
+  max-width: 100%;
+  max-height: 100%;
+  height: 500px;
+  width: 500px;
+}
+
+
+/* show page styling */
+.allShowPage{
+  border: 1px solid #000203;
+}
+
+.showFundContainer h1 {
+  width: 100%;
+  background-color: #71797f;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.fundTitle{
+  border: 4px solid #000;
+  border-radius: 17px;
+  background-color: #4b5053;
+  color: rgb(237, 237, 237);
+}
+
+.fundInfo {
+  color: black;
+  background-color: #E0E0E0;
+  border-radius: 20px;
+}
+
+.editDltButtons{
+  flex: 100%;
+  margin-top: 10px;
+}
+
+.editBtn,.deleteBtn{
+  font-size: 25px;
+  font-weight: bold;
+  width: 250px;
+  border-radius: 20px;
+}
+
+.deleteBtn{
+  background-color:	#FFA500;
+}
+
+.editBtn{
+  background-color: #7CB9E8;
+}
+
+
+button:hover{
+  cursor: pointer;
+  background-color: gainsboro;
+}
+
+
+.priceGraph{
+  background-color: #E0E0E0;
+  border-radius: 20px;
+}
+.priceGraphData{
+  background-color: #E0E0E0;
+  border-radius: 20px;
+}
+
+.HistoricalGraph{
+  border-radius: 20px;
+  background-color: #E0E0E0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.dividendGraph{
+  border-radius: 20px;
+  background-color: #E0E0E0;
+}
+
+
+/* creating the card for percent changes*/
+.card {
+  border-radius: 20px;
+  background-color: #E0E0E0;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.lastClosePrice{
+  font-size: 30px;
+}
+
+.percent {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+/* this container encompasses all the components on the show page */
+.container{
+  font-family: "gotham narrow",Georgia,serif;
+  border: 2px solid #000;
+  background-color: 	#9d9fa1;
+  border-radius: 20px;
+}
+/* auth styling */
+.createForm{
+  font-family: "gotham narrow",Georgia,serif;
+}
+
+/* styling of the chat we use the !important to override the styling from the comet-chat packages */
+.cometchat__users__with__messages {
+  width: 90% !important;
+  height: 60% !important;
+  border: 1px solid grey !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
