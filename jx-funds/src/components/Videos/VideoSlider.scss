@@ -1,0 +1,113 @@
+// In this file we will put the css for the video slider
+// This is the div for the actual video 
+.video{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; //the z index will allow us to place the video in front of zindex with smaller z index
+}
+.videoSlider{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    overflow: scroll;
+}
+.videoSlide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all .5s ease;
+}
+// For the slide image, if the screen is more than 600 px, the set the max width and height to 100%
+@media screen and (min-width: 600px){
+    .videoSlide img {
+        width: 100%;
+        height: 100%;
+    }
+}
+.videoSlide img {
+    height: 100%;
+}
+// style the contents on the slide
+.videoContent {
+    text-align: center;
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 55%;
+    padding: 1rem;
+    background: rgba(172, 225, 175, 0.75);
+    animation: slide-up 1s ease .5s;
+    animation-fill-mode: forwards;
+  }
+@keyframes slide-up {
+    0%{
+        visibility: visible;
+        top: 20rem; 
+    }
+    100%{
+        visibility: visible;
+        top: 5rem; 
+    }
+}
+
+// now we want to adjust for the mobile phone 
+@media screen and (max-width: 600px){
+    .videoContent{
+        width: 80%;
+    }
+}
+
+
+
+//all children of content set it to white 
+.videoContent > * {
+    color: black;
+    margin-bottom: 1rem;
+    
+}
+// current slide
+.currentVideo{
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 1; // add this so that we can make the other slides clickable
+}
+.currentVideo .videoContent{
+    opacity: 1;
+}
+
+// Arrows 
+.arrowVideo {
+    border: 2px solid white;
+    border-radius: 50%;
+    background: transparent;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer; 
+    position: absolute;
+    top:50%;
+    z-index: 999;
+}
+.arrowVideo:hover{
+    background: black;
+    color:white;
+}
+.nextVideo{
+    right: 1.5rem;
+}
+.prevVideo{
+    left: 1.5rem;
+}
+hr{
+    height:2px; 
+    background:white;
+    width: 100%;
+}
