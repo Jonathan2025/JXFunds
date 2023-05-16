@@ -5,7 +5,7 @@ import HistoricalGraph from "../components/ShowPage/HistoricalGraph";
 import Card from "../components/ShowPage/ChangeCard";
 import FundInformation from "../components/ShowPage/FundContainer";
 import { useAuth0 } from "@auth0/auth0-react";
-import LoginButton from "../components/Authentication/Login";
+import Login from "./Login";
 import CommentsContainer from "../components/Comments/CommentsContainer";
 
 
@@ -23,23 +23,16 @@ const Show = (props) => {
   const id = params.id;
   const funds = props.funds;
   const fund = funds.find((f) => f._id === id);
-  // console.log("here are all the data for this fund", fund)
-  // console.log(fund.id)
 
   // see if the user is authenticated first
   const { user, isAuthenticated } = useAuth0();
   const loginUserId = isAuthenticated ? user.email.split('@')[0] : 'No user login was passed';
-
+  
   if (!isAuthenticated) {
-      return (
-          <section className='createForm'>
-              <div>
-                  <h1>Sign In to Access JXFunds!</h1>
-                  <LoginButton className="loginButton"/>
-              </div>
-          </section>
-      );
-  } 
+    return (
+      <Login />
+    );
+  }
 
   //linking edit btn to edit route
   const editForm = (e) => {

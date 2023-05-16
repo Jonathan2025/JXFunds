@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom"
 import { useAuth0 } from "@auth0/auth0-react";
-import LoginButton from "../components/Authentication/Login";
+import LoginButton from "../components/Authentication/LoginButton";
 
 const Edit = (props) => {
 

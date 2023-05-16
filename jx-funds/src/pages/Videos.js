@@ -8,8 +8,6 @@ const Video = () => {
         <div>
             <VideoSlider />
         </div>
- 
-
     );
   };
   
