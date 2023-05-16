@@ -8,7 +8,7 @@ const Profile = () => {
   if (isLoading) {
     return <div>Loading ...</div>;
   }
-
+  
   return (
     isAuthenticated && (
       <div>

@@ -166,7 +166,7 @@ background: inherit;
 }
 
 
-/* create page styling (Please note this will also serve as the LoginPage as well*/
+/* create page styling */
 .createFund{
   font-family: "gotham narrow",Georgia,serif;
   margin: 0px 90px 0px 90px;
@@ -555,18 +555,93 @@ button:hover{
   transform: translate(-50%, -50%);
 }
 
+/* Login page styling */
+.loginForm {
+  position: relative;
+}
+
+.loginBackground {
+  position: relative;
+  z-index: 1; /* this makes sure that the login content are over the image*/
+}
+
+.loginBackground img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.loginContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensure it's on top of the image */
+  text-align: center;
+  color: white;
+  border: 2px solid white;
+  background-color: rgba(1, 0, 0, 0.7); /* Shaded gray background */
+  padding: 10px;
+}
+
+.loginMessage {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+
+}
 
 
+.loginButton {
+  background-color: orange; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  width:100%;
+  max-width: 200px;
+}
 
 
+/* We set two media queries that adjust based on the size of the screen */
+@media (max-width: 768px) {
+  .loginContent {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
+  .loginMessage {
+    font-size: 2rem;
+  }
+  
+  .loginButton {
+    font-size: 1rem;
+    max-width: 150px;
+  }
+}
 
-
-
-
-
-
-
-
+@media (max-width: 480px) {
+  .loginContent {
+    max-width: 95%;
+    max-height: 95%;
+  }
+  
+  .loginMessage {
+    font-size: 2rem;
+  }
+  
+  .loginButton {
+    font-size: 1rem;
+    max-width: 120px;
+  }
+}
 
 
 

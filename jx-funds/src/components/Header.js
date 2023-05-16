@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Search from "./Search";
 import LogoutButton from "./Authentication/Logout";
-import LoginButton from "./Authentication/Login";
+import LoginButton from "./Authentication/LoginButton";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Header = (props) => {
