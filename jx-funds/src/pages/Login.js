@@ -1,5 +1,6 @@
 import LoginButton from "../components/Authentication/LoginButton";
 
+// This will be the actual login page in which we get the login button from authentication component folder
 const Login = (props) => {
 
 return (
