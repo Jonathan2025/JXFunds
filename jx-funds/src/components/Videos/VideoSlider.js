@@ -42,10 +42,9 @@ const VideoSlider = () => {
                                     <hr></hr>
                                     <p>{slide.desc}</p>
                                 </div> 
-                                <div className="video">
-                                    {slide.video}
-                                </div>
-                               
+                        
+                                <video className="video" src={slide.video} controls></video>
+                        
                             </>
                         )}
                     </div>

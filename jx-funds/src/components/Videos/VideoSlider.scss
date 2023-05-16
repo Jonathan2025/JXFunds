@@ -1,12 +1,6 @@
 // In this file we will put the css for the video slider
 // This is the div for the actual video 
-.video{
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1; //the z index will allow us to place the video in front of zindex with smaller z index
-}
+
 .videoSlider{
     width: 100%;
     height: 80vh;
@@ -37,11 +31,10 @@
 .videoContent {
     text-align: center;
     position: absolute;
-    top: 5rem;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    width: 55%;
+    width: 40%;
     padding: 1rem;
     background: rgba(172, 225, 175, 0.75);
     animation: slide-up 1s ease .5s;
@@ -61,8 +54,11 @@
 // now we want to adjust for the mobile phone 
 @media screen and (max-width: 600px){
     .videoContent{
-        width: 80%;
+        width: 70%;
+        height: 30%;
+        font-size: 1rem;
     }
+
 }
 
 
@@ -110,4 +106,28 @@ hr{
     height:2px; 
     background:white;
     width: 100%;
+}
+
+.video{
+    position: absolute;
+    width: 40%;
+    height: 70%;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; //the z index will allow us to place the video in front of zindex with smaller z index
+    object-fit: contain; 
+}
+
+// now we want to adjust for the mobile phone 
+@media screen and (max-width: 600px){
+    .video{
+        width: 70%;
+        height: 70%;
+        top: 45%;
+        left: 50%;
+        object-fit: contain; 
+    }
+
+
 }
