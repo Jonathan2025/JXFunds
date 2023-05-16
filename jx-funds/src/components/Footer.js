@@ -5,7 +5,7 @@ const Footer = (props) => {
     <>
       <div className="footer">
         <div className="socials">
-          <a href="https://twitter.com/PassivefundsIn">
+          <a href="https://twitter.com/PassivefundsIn" target="_blank" rel="noopener noreferrer">
             <img
               className="twitter"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRABBZ8p9SYIZ42RZH29oUr-EsJ66qcowmVgm1vL3_YzuYoV5JOfwpPmqxsPE58qeHl-ZU&usqp=CAU"

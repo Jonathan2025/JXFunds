@@ -1,14 +1,17 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import Chat from "./Chat";
+import Login from "../../pages/Login";
 
-const Profile = () => {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+const Profile = (props) => {
+  const { user, isAuthenticated} = useAuth0();
 
-  if (isLoading) {
-    return <div>Loading ...</div>;
+  if (!isAuthenticated) {
+    return (
+      <Login />
+    );
   }
-  
+
   return (
     isAuthenticated && (
       <div>

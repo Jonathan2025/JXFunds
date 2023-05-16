@@ -45,10 +45,6 @@ const HistoricalGraph = ({fund}) => {
         getAPIData()
     }, [])
 
-    
-    // console.log("monthly close data", monthlyAdjustedCloseData)
-
-
     const data = {
         labels: monthlyAdjustedCloseData ? Object.keys(monthlyAdjustedCloseData).reverse() : [], 
         datasets: [{

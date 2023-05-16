@@ -66,11 +66,6 @@ const DividendGraph = ({fund}) => {
     }]
   }
 
-// console.logs to see what we get as data and how to access them
-//   console.log("lets see the data labels", data.labels)
-//   console.log("lets see data.data", data.datasets[0].data)
-//   console.log("Non-zero labels:", nonZeroLabels);
-
   return (
     <div className="dividendGraph">
         <h1>Dividends</h1>

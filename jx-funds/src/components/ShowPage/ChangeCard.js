@@ -30,9 +30,6 @@ function Card({fund, showPercent}) {
       getAPIData()
     }, [])
 
-    // console.log("this is the percent change data", percentChangeData)
-    // console.log("this is the previouse close", previousClose)
-
   const percent = parseFloat(percentChangeData);
 
   const percent2 = [0.35, 0.89, 1.27, 0.534, -0.68, -0.44, -0.234, 1.34, -0.456, 0.746, 1.45, 0.91]

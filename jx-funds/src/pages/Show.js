@@ -23,8 +23,6 @@ const Show = (props) => {
   const id = params.id;
   const funds = props.funds;
   const fund = funds.find((f) => f._id === id);
-  // console.log("here are all the data for this fund", fund)
-  // console.log(fund.id)
 
   // see if the user is authenticated first
   const { user, isAuthenticated } = useAuth0();
