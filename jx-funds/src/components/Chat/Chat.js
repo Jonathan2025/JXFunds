@@ -29,7 +29,6 @@ CometChat.login(uid, authKey).then(
     }
   )
 
-
 function Chat() {
     return (
       <div className="cometchat-container">
