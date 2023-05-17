@@ -77,7 +77,6 @@ const Main = (props) => {
                 <Route path='/jxfunds/create' element={<Create funds={funds} createFund={createFund}/>}/>
                 <Route path='/jxfunds/:id' element={funds && (<Show funds={funds} updateFund={updateFund} deleteFund={deleteFund} />)} />
                 <Route path='/jxfunds/edit/:id'element={funds && ( <Edit funds={funds} updateFund={updateFund} />)}/>
-                {/* <Route path='/jxfunds/chat' element={<AuthProfile><Profile /></AuthProfile>} /> */}
                 <Route path='/jxfunds/chat' element={<Profile />} />
              </Routes>
         </main>
