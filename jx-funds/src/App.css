@@ -685,11 +685,9 @@ button:hover{
     max-width: 90%;
     max-height: 90%;
   }
-  
   .loginMessage {
     font-size: 2rem;
   }
-  
   .loginButton {
     font-size: 1rem;
     max-width: 150px;
