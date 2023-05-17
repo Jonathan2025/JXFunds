@@ -14,7 +14,6 @@ const Comment = ({comment, loginUserId, affectedComment, setAffectedComment, add
         affectedComment.type === 'replying' && 
         affectedComment._id === comment._id 
     
-
     // create an isEditing 
     const isEditing = 
         affectedComment && 
