@@ -9,6 +9,6 @@ export const VideoSliderData = [
         image: "https://cdn.corporatefinanceinstitute.com/assets/income-investing-1024x576.jpeg",
         video:"https://jxfundsvideosaccount.blob.core.windows.net/jxfundsnewcontainer/video2.mp4",
         heading: "How to use JX Funds App",
-        desc: "In this short video, we demonstrate ways you can use our app for your own purposes. We hope this app starts you on the path to happy and wealthy future!", 
+        desc: "In this short video, we demonstrate ways you can use our app to start you on the path to happy and wealthy future!", 
     }
 ]

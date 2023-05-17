@@ -38,7 +38,7 @@ const VideoSlider = () => {
                             <>
                                 <img src={slide.image} alt="slide"/>
                                 <div className="videoContent">
-                                    <h3>{slide.heading}</h3>
+                                    <h3 className="videoHeading">{slide.heading}</h3>
                                     <hr></hr>
                                     <p>{slide.desc}</p>
                                 </div> 

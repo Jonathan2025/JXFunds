@@ -57,10 +57,11 @@ const Create = (props) => {
           alt=""
         />
         <div className="createForm">
-          <h1 className="formT">Create a Jx-Fund </h1>
+          <h1 className="createFormTitle">Create a Jx-Fund </h1>
           <form onSubmit={handleSubmit}>
-            <label> Name: </label>  <br/>
+            <label className="createFormlabel"> Name: </label>  <br/>
             <input
+              className="createFormlabel"
               type="text"
               value={newForm.name}
               name="name"
@@ -68,7 +69,7 @@ const Create = (props) => {
               onChange={handleChange}
               required
             /><br/>
-             <label>Company: </label><br/>
+             <label className="createFormlabel">Company: </label><br/>
             <select
               value={newForm.company}
               name="company"
@@ -88,7 +89,7 @@ const Create = (props) => {
               <option value="DWS Group">DWS Group</option>
               <option value="Other">Other</option>
             </select><br/>
-            <label>Symbol: </label><br/>
+            <label className="createFormlabel">Symbol: </label><br/>
             <input
               type="text"
               value={newForm.symbol}
@@ -97,7 +98,7 @@ const Create = (props) => {
               onChange={handleChange}
               required
             /><br/>
-             <label>Description: </label><br/>
+             <label className="createFormlabel">Description: </label><br/>
             <input
               type="text"
               value={newForm.description}
@@ -106,8 +107,9 @@ const Create = (props) => {
               onChange={handleChange}
               required
             /><br/>
-             <label>Recommendation: </label><br/>
+             <label className="createFormlabel">Recommendation: </label><br/>
             <input
+              className="createFormLabel"
               type="text"
               value={newForm.recommendation}
               name="recommendation"
@@ -115,8 +117,9 @@ const Create = (props) => {
               onChange={handleChange}
               required
             /><br/>
-             <label> Date: </label><br/>
+             <label className="createFormlabel"> Date: </label><br/>
             <input
+              className="createFormDatelabel"
               type="date"
               value={newForm.date}
               name="date"

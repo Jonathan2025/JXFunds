@@ -35,7 +35,7 @@
     transform: translate(-50%, -50%);
     opacity: 0;
     width: 40%;
-    padding: 1rem;
+    padding: 0.5rem;
     background: rgba(172, 225, 175, 0.75);
     animation: slide-up 1s ease .5s;
     animation-fill-mode: forwards;
@@ -54,8 +54,11 @@
 // now we want to adjust for the mobile phone 
 @media screen and (max-width: 600px){
     .videoContent{
-        width: 70%;
-        height: 30%;
+        width: 60%;
+        height: 20%;
+        font-size: 0.70rem;
+    }
+    .videoHeading{
         font-size: 1rem;
     }
 
@@ -63,10 +66,10 @@
 
 
 
-//all children of content set it to white 
+//all children of content set it to black
 .videoContent > * {
     color: black;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     
 }
 // current slide
@@ -114,7 +117,7 @@ hr{
     height: 70%;
     top: 58%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -45%);
     z-index: 1; //the z index will allow us to place the video in front of zindex with smaller z index
     object-fit: contain; 
 }

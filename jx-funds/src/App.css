@@ -167,41 +167,45 @@ background: inherit;
 
 
 /* create page styling */
-.createFund{
-  font-family: "gotham narrow",Georgia,serif;
-  margin: 0px 90px 0px 90px;
-  display: grid;
-  margin-top: 30px;
+
+.createFund {
+  font-family: "gotham narrow", Georgia, serif;
+  margin: 0px 200px 0px 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
   background-color: rgb(98, 114, 122);
-  max-height: 700px;
 }
+
+/* Ensure that the image does not go beyond the createFund container */
 .createImg{
-  grid-column-start: 1;
-  grid-column-end: 3;
-  width: 90%;
+  max-width: 100%; 
 }
-.createForm{
-  grid-column-start: 3;
-  grid-column-end: 4;
+
+.createForm {
   text-align: center;
   font-size: 1vw;
-  margin-right: 50px;
-  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto; 
 }
+
+
 input[type=text]{
   font-family: 'PT Serif', serif;
-  font-size: 1vw;
+  font-size: 2vh;
   padding: 5px;
   margin: 0px 20px 10px 10px;
   border: none;
 }
+
 input[type=submit]:not(.submitBtn){
   font-family: 'PT Serif', serif;
   font-size: 18px;
   padding: 7px;
   border-radius: 5px;
-  width: 300px;
-margin-bottom: 5px
+  width: 80%;
+  margin-bottom: 5px
 }
 input[type=submit]:hover{
   cursor: pointer;
@@ -212,11 +216,31 @@ input[type=date]{
   padding: 2px;
   margin-bottom: 10px;
 }
-.formT{
+.createFormTitle{
   font-weight: bold;
-  font-size: 30px;
+  font-size: 3vh;
   color: whitesmoke;
 }
+
+.createFormlabel{
+  font-size: 1vw;
+}
+
+@media screen and (max-width: 600px){
+  .createFormlabel {
+    font-size: 3vw;
+  }
+  .createFormTitle{
+    font-size: 5vw;
+  }
+  .createFund{
+    justify-content: center;
+    margin: 0px;
+  }
+}
+
+
+
 
 /* about page styling */
 .allAbout{
