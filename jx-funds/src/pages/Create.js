@@ -127,7 +127,7 @@ const Create = (props) => {
               required
             />
             <br/>
-            <input type="submit" value="Create Fund" />
+            <input className="createFundBtn" type="submit" value="Create Fund" />
           </form>
         </div>
       </section>

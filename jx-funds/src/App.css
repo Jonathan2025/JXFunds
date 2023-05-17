@@ -108,11 +108,39 @@ background: inherit;
   color: black;
 }
 
+.logoutBtn{
+  background-color: #FF0800; 
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  width:100%;
+  max-width: 150px;
+}
+
+@media screen and (max-width: 600px){
+  .logoutBtn{
+    font-size: 0.8rem;
+  }
+
+  .user-email{
+    font-size: 0.8rem;
+  }
+}
+
+
 /* within the dropdown adjust the size of the email to fit in the dropdown */
 .user-email {
   font-size: clamp(10px, 1.25vw, 1.25vw);
   background-color: #6699cc;
-  padding: 5px;
+  padding: 3px;
 }
 
 
@@ -121,7 +149,6 @@ background: inherit;
   font-family: "gotham narrow",Georgia,serif;
   margin: 0;
   text-align: center;
-  font-size: 45px;
   -webkit-animation: fadeIn 4s;
   animation:fadeIn 4s;
 }
@@ -141,10 +168,20 @@ background: inherit;
   left: 50%;
   transform: translate(-50%,-50%);
 }
+
 .phraseL{
-  font-size: 50px;
+  font-size: 3rem;
   font-weight: bold;
 }
+
+@media screen and (max-width: 600px){
+  .phraseL{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+
 .aboutLink{
   font-size: 25px;
   color: whitesmoke;
@@ -224,6 +261,11 @@ input[type=date]{
 
 .createFormlabel{
   font-size: 1vw;
+}
+
+.createFundBtn{
+  background-color: #6699cc;
+  color:white;
 }
 
 @media screen and (max-width: 600px){
@@ -454,15 +496,6 @@ border: none;
   color: #FFFFFF;
 }
 
-/* added styling for the comet chat */
-.cometchat-container {
-  max-width: 100%;
-  max-height: 100%;
-  height: 500px;
-  width: 500px;
-}
-
-
 /* show page styling */
 .allShowPage{
   border: 1px solid #000203;
@@ -498,6 +531,7 @@ border: none;
   font-weight: bold;
   width: 250px;
   border-radius: 20px;
+  color:white;
 }
 
 .deleteBtn{
@@ -505,7 +539,7 @@ border: none;
 }
 
 .editBtn{
-  background-color: #7CB9E8;
+  background-color: #6699cc;
 }
 
 
@@ -579,6 +613,17 @@ button:hover{
   transform: translate(-50%, -50%);
 }
 
+/* Because the comet chat has its own preinstalled styling we need to adjust the footer specifically for the chat route */
+.chat-footer{
+  font-family: "gotham narrow",Georgia,serif;
+  margin-top: 20px;
+  text-align:center;
+  color: #bbb;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 /* Login page styling */
 .loginForm {
   position: relative;
@@ -640,11 +685,9 @@ button:hover{
     max-width: 90%;
     max-height: 90%;
   }
-  
   .loginMessage {
     font-size: 2rem;
   }
-  
   .loginButton {
     font-size: 1rem;
     max-width: 150px;

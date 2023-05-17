@@ -1,9 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
+import { useLocation } from 'react-router-dom'
 
 const Footer = (props) => {
+  {/* Because the comet chat comes with its own styling, we need to adjust the styling of the footer for this page specifically */}
+  const location = useLocation();
+  const isChatRoute = location.pathname === '/jxfunds/chat'
+
   return (
     <>
-      <div className="footer">
+      {/* if we hit the chatRoute, then use chat-footer css otherwise use the regular footer css */}
+      <div className={`footer ${isChatRoute ? 'chat-footer' : ''}`}>
         <div className="socials">
           <a href="https://twitter.com/PassivefundsIn" target="_blank" rel="noopener noreferrer">
             <img
