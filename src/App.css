@@ -1,84 +1,87 @@
-/* nav bar styling */
-.searchbar{
-  max-width: 20%; 
+ /* nav bar styling */
+
+/* Updated nav bar styling */
+.searchbar {
+  max-width: 20%;
   display: flex;
   align-items: center;
-  /* justify-content:space-around; */
-  background-color:rgba(245,245,245,.6);
+  background-color: rgba(245, 245, 245, 0.6);
   padding: 1%;
   text-decoration: none;
-  font-size: 1.5vw; 
-  }
+  font-size: 1.5vw;
+}
 
-.navBar{
-  font-family: "gotham narrow",Georgia,serif;
+.navBar {
+  font-family: "gotham narrow", Georgia, serif;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 1.25%;
   background-color: #79a6d2;
-  opacity: .9;
+  opacity: 0.9;
   text-decoration: none;
-  font-size: 1.75vw; 
+  font-size: 1.75vw;
   margin-bottom: 1%;
-  }
+}
 
-.sticky-top{
+.sticky-top {
   position: sticky;
 }
 
-a:not(.logo){
+a:not(.logo) {
   font-weight: bold;
   text-decoration: none;
   color: rgb(29, 29, 29);
 }
-a:hover :not(.logo){
+
+a:hover:not(.logo) {
   cursor: pointer;
   color: #bbb;
 }
 
 /* Logo styling on the NAV bar */
-.logo{
+.logo {
   max-width: 20%;
-  font-family: "gotham narrow",Georgia,serif;
-  font-weight:bold;
-  font-size: 4vw;
+  font-family: "gotham narrow", Georgia, serif;
+  font-weight: bold;
+  font-size: 3vw;
   position: relative;
-  /* left: 2%;  */
-  color:rgb(43, 43, 43);
+  color: rgb(43, 43, 43);
   text-decoration: none;
 }
 
-.logo:hover{
- text-decoration: none;
+.logo:hover {
+  text-decoration: none;
 }
 
 /* search bar styling on the nav bar */
-.submitBtn{
-  max-width: 50%;
+.submitBtn {
+  max-width: 40%;
   position: relative;
   background-color: rgb(98, 114, 122);
   border-style: none;
   margin: 0 auto;
 }
 
-input[type = search]{
+input[type=search] {
   flex-grow: 1;
   position: relative;
-  max-width: 75%; 
+  max-width: 80%;
 }
 
-/* drop down styling  on the nav bar*/
-.dropDown, .dropBtn{
+/* drop down styling on the nav bar */
+.dropDown,
+.dropBtn {
   border: none;
   background-color: inherit;
   font-size: 2vw;
-  font-family: "gotham narrow",Georgia,serif;
+  font-family: "gotham narrow", Georgia, serif;
   font-weight: bold;
-  position: relative
+  position: relative;
 }
-.dropLinks{
+
+.dropLinks {
   display: none;
   position: absolute;
   background-color: whitesmoke;
@@ -87,29 +90,36 @@ input[type = search]{
   padding: 10px;
   min-width: 110px;
   min-height: 80px;
-  text-align:center;
-  box-shadow: 0px 5px 10px 5px rgba(0,0,0,.5);
+  text-align: center;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.5);
 }
-.dropBtn:hover ~ .dropLinks, .dropLinks:hover{
+
+.dropBtn:hover ~ .dropLinks,
+.dropLinks:hover {
   display: block;
 }
-.dropBtn:hover, .dropLink:hover{
+
+.dropBtn:hover,
+.dropLink:hover {
   background-color: whitesmoke;
   color: black;
 }
-.dropBtn:hover{
-background: inherit;
+
+.dropBtn:hover {
+  background: inherit;
 }
-.dropLink:hover{
+
+.dropLink:hover {
   color: #bbb;
 }
-.unicodeArrow{
+
+.unicodeArrow {
   font-size: 10px;
   color: black;
 }
 
-.logoutBtn{
-  background-color: #FF0800; 
+.logoutBtn {
+  background-color: #ff0800;
   border: none;
   color: white;
   padding: 5px;
@@ -121,22 +131,21 @@ background: inherit;
   cursor: pointer;
   border-radius: 4px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
-  width:100%;
+  width: 100%;
   max-width: 150px;
 }
 
-@media screen and (max-width: 600px){
-  .logoutBtn{
+@media screen and (max-width: 600px) {
+  .logoutBtn {
     font-size: 0.8rem;
   }
 
-  .user-email{
+  .user-email {
     font-size: 0.8rem;
   }
 }
 
-
-/* within the dropdown adjust the size of the email to fit in the dropdown */
+/* Adjust size of email to fit in the dropdown */
 .user-email {
   font-size: clamp(10px, 1.25vw, 1.25vw);
   background-color: #6699cc;
