@@ -385,6 +385,11 @@ input[type=date]{
   display: grid;
   margin-top: 30px;
 }
+.formT{
+  font-weight: bold;
+  font-size: 3vh;
+  color: whitesmoke;
+}
 .editImg{
   grid-column-start:1 ;
   grid-column-end: 3;
@@ -410,6 +415,27 @@ width: 180px;
 height: 35px;
 font-size: 15px;
 border: none;
+}
+
+@media screen and (max-width: 600px){
+  .editForm {
+    font-size: 3vw;
+    max-width: 100%;
+  }
+  label{
+    font-size: 4vw;
+  }
+  .editFund{
+    justify-content: center;
+    margin: 0px;
+  }
+  .editImg{
+  grid-column-start:2;
+  grid-column-end: 6;
+  width: 100%;
+  max-height: 100%;
+  }
+
 }
 
 /* footer styling */
