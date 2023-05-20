@@ -107,7 +107,7 @@ const Edit = (props) => {
                 /><br/>
                 <br/>
             
-                <input type="submit" value="Update Fund" />
+                <input type="submit" value="Update Fund"/>
                 </form>
                 </div>
           
