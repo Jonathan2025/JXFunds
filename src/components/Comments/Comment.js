@@ -62,6 +62,10 @@ const Comment = ({comment, loginUserId, affectedComment, setAffectedComment, add
                         initialText ={comment.desc}
                         />
                     )}
+
+
+
+
                      {/* seeing if user is logged in before we allow them to reply to a comment */}
                     <div class="d-flex gap-3 text-secondary text-sm mt-3 mb-3">
                     {/* <div class=""> */}
@@ -74,6 +78,11 @@ const Comment = ({comment, loginUserId, affectedComment, setAffectedComment, add
                                 <span>Reply</span>
                             </button>
                         )}
+
+
+
+
+
 
                         {/* user must be the same user as the one who made the comment to be able to edit and delete it */}
                         {commentBelongsToUser && (
@@ -95,6 +104,10 @@ const Comment = ({comment, loginUserId, affectedComment, setAffectedComment, add
                             </>
                         )}
                         </div>
+
+
+
+
                         {/* If the user is replying then render the comment form and then pass in the addComment function*/}
                         {isReplying && (
                             <CommentForm

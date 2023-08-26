@@ -13,6 +13,9 @@ Since our project presentation to the class, some new features to the project in
 * Creating an eye-pleasing auto-slider so that users can scroll through publications and videos
 * Styling the app so that it is also viewable on mobile devices
 
+## Informational Videos 
+Many users are not familiar with investing, which is why our team created easy-to-follow videos that explain introductory concepts and give you a roadmap for how to get started with investing. These videos are powered by the Micrososft Azure Cloud Storage capabilities and the finance knowledge of our team.
+<img style="width:90%;height:75%;" alt="Screenshot 2023-08-26 at 10 20 10 AM" src="https://github.com/Jonathan2025/JXFunds/assets/118234157/fb2c7cc8-21f6-4043-8b66-a1e3568ec02a">
 
 ## Photos
 <div style="display:flex;justify-content:center;">
